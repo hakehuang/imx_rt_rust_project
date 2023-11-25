@@ -12,16 +12,9 @@ manifest:
   # Please add items below based on alphabetical order
   projects:
     - name: qemu
-      revision: rt595_upstream
+      revision: master
       path: modules/qemu
       url:  https://github.com/nxp-zephyr/qemu.git
-      groups:
-        - qemu
-
-    - name: qemu_dbus
-      revision: main
-      path: modules/qemu_dbus
-      url:  ssh://git@bitbucket.sw.nxp.com/~nxa22633/qemu_dbus.git
       groups:
         - qemu
 
@@ -33,14 +26,14 @@ manifest:
         - imxrt
 
     - name: imxrt-rt
-      revision: master
+      revision: main
       path: modules/imxrt-rt
       url:  https://github.com/imxrt-rs/imxrt-rt.git
       groups:
         - imxrt-examples
 
     - name: imxrt-hal
-      revision: master
+      revision: main
       path: modules/imxrt-hal
       url:  https://github.com/imxrt-rs/imxrt-hal.git
       groups:
@@ -61,7 +54,7 @@ manifest:
         - imxrt-boot
 
     - name: book
-      revision: master
+      revision: main
       path: modules/book
       url:  https://github.com/imxrt-rs/book.git
       groups:
@@ -75,7 +68,7 @@ manifest:
         - bsp
 
     - name: imxrt-dcd
-      revision: master
+      revision: main
       path: modules/imxrt-dcd
       url:  https://github.com/imxrt-rs/imxrt-dcd.git
       groups:
@@ -96,7 +89,7 @@ manifest:
         - driver
 
     - name: imxrt-uart-panic
-      revision: master
+      revision: main
       path: modules/imxrt-uart-panic
       url:  https://github.com/imxrt-rs/imxrt-uart-panic.git
       groups:
