@@ -1,0 +1,108 @@
+# The west manifest file for rom test utilies.
+#
+manifest:
+  defaults:
+    remote: upstream
+
+  remotes:
+    - name: upstream
+      url-base: https://github.com/hakehuang/imx_rt_rust_project.git
+
+  #
+  # Please add items below based on alphabetical order
+  projects:
+    - name: qemu
+      revision: rt595_upstream
+      path: modules/qemu
+      url:  https://github.com/nxp-zephyr/qemu.git
+      groups:
+        - qemu
+
+    - name: qemu_dbus
+      revision: main
+      path: modules/qemu_dbus
+      url:  ssh://git@bitbucket.sw.nxp.com/~nxa22633/qemu_dbus.git
+      groups:
+        - qemu
+
+    - name: imxrt-ral
+      revision: master
+      path: modules/imxrt-ral
+      url:  https://github.com/imxrt-rs/imxrt-ral.git
+      groups:
+        - imxrt
+
+    - name: imxrt-rt
+      revision: master
+      path: modules/imxrt-rt
+      url:  https://github.com/imxrt-rs/imxrt-rt.git
+      groups:
+        - imxrt-examples
+
+    - name: imxrt-hal
+      revision: master
+      path: modules/imxrt-hal
+      url:  https://github.com/imxrt-rs/imxrt-hal.git
+      groups:
+        - imxrt
+
+    - name: imxrt-usbd
+      revision: master
+      path: modules/imxrt-usbd
+      url:  https://github.com/imxrt-rs/imxrt-usbd.git
+      groups:
+        - imxrt-stack
+
+    - name: imxrt-boot-gen
+      revision: master
+      path: modules/imxrt-boot-gen
+      url:  https://github.com/imxrt-rs/imxrt-boot-gen.git
+      groups:
+        - imxrt-boot
+
+    - name: book
+      revision: master
+      path: modules/book
+      url:  https://github.com/imxrt-rs/book.git
+      groups:
+        - book
+
+    - name: imxrt1060evk-bsp
+      revision: master
+      path: modules/imxrt1060evk-bsp
+      url:  https://github.com/imxrt-rs/imxrt1060evk-bsp.git
+      groups:
+        - bsp
+
+    - name: imxrt-dcd
+      revision: master
+      path: modules/imxrt-dcd
+      url:  https://github.com/imxrt-rs/imxrt-dcd.git
+      groups:
+        - boot
+
+    - name: imxrt-dma
+      revision: master
+      path: modules/imxrt-dma
+      url:  https://github.com/imxrt-rs/imxrt-dma.git
+      groups:
+        - driver
+
+    - name: imxrt-iomuxc
+      revision: master
+      path: modules/imxrt-iomuxc
+      url:  https://github.com/imxrt-rs/imxrt-iomuxc.git
+      groups:
+        - driver
+
+    - name: imxrt-uart-panic
+      revision: master
+      path: modules/imxrt-uart-panic
+      url:  https://github.com/imxrt-rs/imxrt-uart-panic.git
+      groups:
+        - debug
+
+
+  self:
+    path: imx_rt_rust_project
+    import: submanifests
